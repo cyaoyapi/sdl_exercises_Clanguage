@@ -31,8 +31,8 @@ int main(int argc, char *argv[]){
     position.x = 0;
     for(i = 255; i >= 0; i--){
         lines[i] = SDL_CreateRGBSurface(SDL_HWSURFACE, 650, 1, 32, 0, 0, 0, 0);
-        position.y = i;
-        SDL_FillRect(lines[i], NULL, SDL_MapRGB(screen->format, i, i, i));
+        position.y = 255 -i;
+        SDL_FillRect(lines[i], NULL, SDL_MapRGB(screen->format, i, 0, 0));
         SDL_BlitSurface(lines[i], NULL, screen, &position);
     }
 
