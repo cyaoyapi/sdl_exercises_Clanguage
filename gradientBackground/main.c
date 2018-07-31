@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
 
     // Drawing 256 rectangles
     position.x = 0;
-    for(i = 0; i < 256; i++){
+    for(i = 255; i >= 0; i--){
         lines[i] = SDL_CreateRGBSurface(SDL_HWSURFACE, 650, 1, 32, 0, 0, 0, 0);
         position.y = i;
         SDL_FillRect(lines[i], NULL, SDL_MapRGB(screen->format, i, i, i));
